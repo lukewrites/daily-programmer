@@ -30,10 +30,8 @@ class Planet(object):
         self.density = density  # in kg/m3
         self.volume = ((4 / 3) * pi * (self.radius ^ 3))
         self.planet_mass = self.volume * self.density
-        # TODO add in automatic tagging of units.
 
     def thing(self, mass):
         self.mass = mass  # in kg
         self.weight = gravity * ((self.mass * self.planet_mass) / 1)
         print self.name + ':', self.weight, 'N'
-        # TODO add in unit for weight.
