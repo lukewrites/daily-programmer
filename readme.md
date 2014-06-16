@@ -1,7 +1,9 @@
 This repository contains original solutions for programming challenges presented in the [/r/dailyprogrammer](http://www.reddit.com/r/dailyprogrammer/) subreddit.
 
+Challenges are categorized by difficulty and organized in order attempted.
+
 ## Easy
-### [Planatary Gravity Calculator](http://www.reddit.com/r/dailyprogrammer/comments/284mep/6142014_challenge_166b_easy_planetary_gravity/)
+### [Planatary_Gravity_Calculator.py](http://www.reddit.com/r/dailyprogrammer/comments/284mep/6142014_challenge_166b_easy_planetary_gravity/)
 #### Input Description
 
 You will be given a number M which is the mass of an object in kilograms, on its own line, for example:
