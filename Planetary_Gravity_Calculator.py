@@ -28,4 +28,7 @@ from math import pi
 
 class Planet(object):
     """A planet class"""
-    def __init__(self, arg):
+    def __init__(self, name, radius, density):
+        self.name = name
+        self.radius = radius
+        self.density = density
