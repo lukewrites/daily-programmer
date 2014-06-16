@@ -33,5 +33,6 @@ class Planet(object):
 
     def thing(self, mass):
         self.mass = mass  # in kg
-        self.weight = gravity * ((self.mass * self.planet_mass) / 1)
+        self.weight = gravity * ((self.mass * self.planet_mass) /
+                                 (self.radius ** 2))
         print self.name + ':', self.weight, 'N'
