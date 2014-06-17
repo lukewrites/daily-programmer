@@ -28,11 +28,9 @@ class Planet(object):
         self.name = name
         self.radius = radius  # in meters
         self.density = density  # in kg/m3
-        self.volume = ((4 / 3) * pi * (self.radius ^ 3))
+        self.volume = 4 / 3 * pi * self.radius**3
         self.planet_mass = self.volume * self.density
 
-    def thing(self, mass):
-        self.mass = mass  # in kg
-        self.weight = gravity * ((self.mass * self.planet_mass) /
-                                 (self.radius ** 2))
-        print self.name + ':', self.weight, 'N'
+    def thing(self, weight):
+        self.weight = weight
+        return gravity * (weight * self.planet_mass) / self.radius**2
