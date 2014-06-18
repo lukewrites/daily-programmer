@@ -34,3 +34,8 @@ class Planet(object):
     def thing(self, weight):
         self.weight = weight
         return gravity * (weight * self.planet_mass) / self.radius**2
+
+with open('planets.txt', 'r') as f:
+    content = f.readlines()
+
+len(content)
