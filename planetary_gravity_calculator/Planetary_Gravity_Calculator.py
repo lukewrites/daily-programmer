@@ -37,6 +37,11 @@ class Planet(object):
         return gravity * (weight * self.planet_mass) / self.radius**2
 
 with open('planets.txt', 'r') as f:
-    content = f.readlines()
+    contents = [line.rstrip() for line in f.readlines()]
 
-len(content)
+planets = [contents[i].split() for i in range(2, len(contents) + 1)]
+planets = [planets[i].replace(',', '') for i in range(0, len(planets))]
+planets = [planets[i].split() for i in range(0, len(planets))]
+
+for i in range(int(contents(1)):
+    print "%s: %r Newtons" % planets[i][0], 
