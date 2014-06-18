@@ -39,9 +39,12 @@ class Planet(object):
 with open('planets.txt', 'r') as f:
     contents = [line.rstrip() for line in f.readlines()]
 
-planets = [contents[i].split() for i in range(2, len(contents) + 1)]
+mass = int(contents[0])
+
+planets = [contents[i].split() for i in range(2, len(contents) + 1)]  # TODO fix this?
 planets = [planets[i].replace(',', '') for i in range(0, len(planets))]
 planets = [planets[i].split() for i in range(0, len(planets))]
 
-for i in range(int(contents(1)):
-    print "%s: %r Newtons" % planets[i][0], 
+for i in range(0, int(len(planets))):
+    temp_planet = Planet(planets[i][0], int(planets[i][1]), int(planets[i][2]))
+    print "%s: %r Newtons" % planets[i][0], temp_planet(mass)
