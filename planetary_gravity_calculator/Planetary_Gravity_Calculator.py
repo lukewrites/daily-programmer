@@ -41,10 +41,15 @@ with open('planets.txt', 'r') as f:
 
 mass = int(contents[0])
 
-planets = [contents[i].split() for i in range(2, len(contents) + 1)]  # TODO fix this?
-planets = [planets[i].replace(',', '') for i in range(0, len(planets))]
-planets = [planets[i].split() for i in range(0, len(planets))]
+planets = [contents[i].split(',') for i in range(2, len(contents))]
 
-for i in range(0, int(len(planets))):
-    temp_planet = Planet(planets[i][0], int(planets[i][1]), int(planets[i][2]))
-    print "%s: %r Newtons" % planets[i][0], temp_planet(mass)
+def main():
+    for i in range(0, int(len(planets))):
+        temp_planet = Planet(planets[i][0], int(planets[i][1]), int(planets[i][2]))
+        newts = temp_planet.thing(mass)
+        planet = planets[i][0]
+        print planet + ": " + str(newts) + " N"
+
+
+if __name__ == '__main__':
+    main()
