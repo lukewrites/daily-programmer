@@ -46,7 +46,7 @@ def main():
         temp_planet = Planet(planets[i][0], float(planets[i][1]), float(planets[i][2]))
         newts = temp_planet.thing(mass)
         planet = planets[i][0]
-        print planet + ": " + str(newts) + " N"
+        return planet + ": " + str(newts) + " N"
 
 
 if __name__ == '__main__':
