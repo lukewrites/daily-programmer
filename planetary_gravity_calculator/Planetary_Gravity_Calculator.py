@@ -28,7 +28,7 @@ class Planet(object):
     def __init__(self, name, radius, density):
         self.name = name
         self.radius = radius
-        self.planet_mass = (4 / 3) * pi * (self.radius ** 3) * density
+        self.planet_mass = (4.0 / 3.0) * pi * (self.radius ** 3) * density
 
     def thing(self, weight):
         return gravity * (weight * self.planet_mass) / self.radius ** 2

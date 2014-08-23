@@ -20,5 +20,14 @@ z a d f o n
 """
 
 def word_checker(words, chars):
+    # make the chars into a sorted list of letters
     letters = chars.join(' ').sort()
-    words = [word.sort() for word in words]
+    # take each of the words and sort them
+    
+    # check to see if each of the sorted words is in the sorted list of letters
+
+    # look @ the list of words that are in the sorted list of letters.
+    # find the longest one(s)
+
+    # return longest word(s)
+
