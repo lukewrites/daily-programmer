@@ -53,3 +53,7 @@ docs/_build/
 
 # pycharm crap
 .idea/
+
+# sublimetext
+*.sublime-project
+*.sublime-workspace
