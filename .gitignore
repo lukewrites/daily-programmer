@@ -57,3 +57,5 @@ docs/_build/
 # sublimetext
 *.sublime-project
 *.sublime-workspace
+
+WordList.txt
