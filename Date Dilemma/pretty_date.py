@@ -29,12 +29,15 @@ def pretty_date(input):
       ord('/'): ' ',
       ord('-'): ' ',
     }
-    cleaned_input = input.translate(remap)
-    cleaned_input = cleaned_input.split()
+    cleaned_input = input.translate(remap).split()
     cleaned_input = [int(cleaned_input[0]), int(cleaned_input[1]), int(cleaned_input[2])]
     if cleaned_input[0] > 99:
-        return datetime.date.isoformat(datetime.date(cleaned_input[0], cleaned_input[1], cleaned_input[2]))
+        return datetime.date.isoformat(datetime.date(cleaned_input[0],
+                                                     cleaned_input[1],
+                                                     cleaned_input[2]))
     else:
         if cleaned_input[2] < 2000:
             cleaned_input[2] += 2000
-        return datetime.date.isoformat(datetime.date(cleaned_input[2], cleaned_input[0], cleaned_input[1]))
+        return datetime.date.isoformat(datetime.date(cleaned_input[2],
+                                                     cleaned_input[0],
+                                                     cleaned_input[1]))
