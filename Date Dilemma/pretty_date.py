@@ -36,7 +36,7 @@ def pretty_date(input):
                                                      cleaned_input[1],
                                                      cleaned_input[2]))
     else:
-        if cleaned_input[2] < 2000:
+        if cleaned_input[2] < 100:
             cleaned_input[2] += 2000
         return datetime.date.isoformat(datetime.date(cleaned_input[2],
                                                      cleaned_input[0],
