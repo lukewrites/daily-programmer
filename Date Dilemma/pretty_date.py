@@ -22,7 +22,8 @@ Sample Output
 
 """
 
-import datetime
+from datetime import date
+
 
 def pretty_date(input):
     remap = {
@@ -30,14 +31,11 @@ def pretty_date(input):
       ord('-'): ' ',
     }
     cleaned_input = input.translate(remap).split()
-    cleaned_input = [int(cleaned_input[0]), int(cleaned_input[1]), int(cleaned_input[2])]
+    cleaned_input = list(map(int, cleaned_input))  # map() to automatically iterate.
     if cleaned_input[0] > 99:
-        return datetime.date.isoformat(datetime.date(cleaned_input[0],
-                                                     cleaned_input[1],
-                                                     cleaned_input[2]))
+        return date.isoformat(date(*cleaned_input))  # use *cleaned_input to make code shorter
     else:
         if cleaned_input[2] < 100:
             cleaned_input[2] += 2000
-        return datetime.date.isoformat(datetime.date(cleaned_input[2],
-                                                     cleaned_input[0],
-                                                     cleaned_input[1]))
+        return date.isoformat(date(cleaned_input[2], *cleaned_input[:2]))
+
