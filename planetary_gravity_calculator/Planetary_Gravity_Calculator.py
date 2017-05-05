@@ -28,6 +28,7 @@ class Planet(object):
     def __init__(self, name, radius, density):
         self.name = name
         self.radius = radius
+        self.density = density  # gotta have this so tests pass.
         self.planet_mass = (4.0 / 3.0) * pi * (self.radius ** 3) * density
 
     def thing(self, weight):
